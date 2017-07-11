@@ -1,0 +1,73 @@
+2017-07-06 04:00:21 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:00:21 9 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:00:21 9 [Note] IPv6 is available.
+2017-07-06 04:00:21 9 [Note]   - '::' resolves to '::';
+2017-07-06 04:00:21 9 [Note] Server socket created on IP: '::'.
+2017-07-06 04:01:37 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:01:37 8 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:01:37 8 [Note] IPv6 is available.
+2017-07-06 04:01:37 8 [Note]   - '::' resolves to '::';
+2017-07-06 04:01:37 8 [Note] Server socket created on IP: '::'.
+2017-07-06 04:03:01 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:03:01 19 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:03:01 19 [Note] IPv6 is available.
+2017-07-06 04:03:01 19 [Note]   - '::' resolves to '::';
+2017-07-06 04:03:01 19 [Note] Server socket created on IP: '::'.
+2017-07-06 04:06:16 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:06:16 20 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:06:16 20 [Note] IPv6 is available.
+2017-07-06 04:06:16 20 [Note]   - '::' resolves to '::';
+2017-07-06 04:06:16 20 [Note] Server socket created on IP: '::'.
+2017-07-06 04:10:23 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:10:23 59 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:10:23 59 [Note] IPv6 is available.
+2017-07-06 04:10:23 59 [Note]   - '::' resolves to '::';
+2017-07-06 04:10:23 59 [Note] Server socket created on IP: '::'.
+2017-07-06 04:10:23 59 [ERROR] Can't start server: Bind on TCP/IP port: Address already in use
+2017-07-06 04:10:23 59 [ERROR] Do you already have another mysqld server running on port: 6100 ?
+2017-07-06 04:10:23 59 [ERROR] Aborting
+
+2017-07-06 04:10:43 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:10:43 74 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:10:43 74 [Note] IPv6 is available.
+2017-07-06 04:10:43 74 [Note]   - '::' resolves to '::';
+2017-07-06 04:10:43 74 [Note] Server socket created on IP: '::'.
+2017-07-06 04:10:43 74 [ERROR] Can't start server: Bind on TCP/IP port: Address already in use
+2017-07-06 04:10:43 74 [ERROR] Do you already have another mysqld server running on port: 6100 ?
+2017-07-06 04:10:43 74 [ERROR] Aborting
+
+2017-07-06 04:14:50 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:14:50 9 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:14:50 9 [Note] IPv6 is available.
+2017-07-06 04:14:50 9 [Note]   - '::' resolves to '::';
+2017-07-06 04:14:50 9 [Note] Server socket created on IP: '::'.
+2017-07-06 04:17:19 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:17:19 9 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:17:19 9 [Note] IPv6 is available.
+2017-07-06 04:17:19 9 [Note]   - '::' resolves to '::';
+2017-07-06 04:17:19 9 [Note] Server socket created on IP: '::'.
+2017-07-06 04:17:52 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:17:52 10 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:17:52 10 [Note] IPv6 is available.
+2017-07-06 04:17:52 10 [Note]   - '::' resolves to '::';
+2017-07-06 04:17:52 10 [Note] Server socket created on IP: '::'.
+2017-07-06 04:18:42 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:18:42 9 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:18:42 9 [Note] IPv6 is available.
+2017-07-06 04:18:42 9 [Note]   - '::' resolves to '::';
+2017-07-06 04:18:42 9 [Note] Server socket created on IP: '::'.
+2017-07-06 04:19:58 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 04:19:58 9 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 04:19:58 9 [Note] IPv6 is available.
+2017-07-06 04:19:58 9 [Note]   - '::' resolves to '::';
+2017-07-06 04:19:58 9 [Note] Server socket created on IP: '::'.
+2017-07-06 06:59:23 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 06:59:23 8 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 06:59:23 8 [Note] IPv6 is available.
+2017-07-06 06:59:23 8 [Note]   - '::' resolves to '::';
+2017-07-06 06:59:23 8 [Note] Server socket created on IP: '::'.
+2017-07-06 06:59:38 0 [Note] Welcome to use Inception2.1.50
+2017-07-06 06:59:38 9 [Note] Server hostname (bind-address): '*'; port: 6100
+2017-07-06 06:59:38 9 [Note] IPv6 is available.
+2017-07-06 06:59:38 9 [Note]   - '::' resolves to '::';
+2017-07-06 06:59:38 9 [Note] Server socket created on IP: '::'.

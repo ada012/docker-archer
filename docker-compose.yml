@@ -1,0 +1,11 @@
+inception:
+  build: ./inception
+  ports:
+    - 5621:5621
+    - 6100:6100
+archer:
+  build: ./archer
+  links:
+      - inception
+  ports:
+    - 8080:80

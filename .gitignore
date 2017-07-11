@@ -1,0 +1,8 @@
+*.pyc
+*.swp
+*.lock
+*.log
+.idea/
+.DS_Store
+#archer/settings.py
+sql/migrations/
