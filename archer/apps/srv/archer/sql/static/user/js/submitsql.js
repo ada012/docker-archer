@@ -4,7 +4,7 @@ function validateForm(element) {
 		function () {
 			var fieldElement = $(this);
 			//如果为null则设置为''
-			var value = fieldElement.val() || '';
+			var value = editor.getValue() || '';
 			if (value) {
 				value = value.trim();
 			}
@@ -20,8 +20,7 @@ function validateForm(element) {
 
 $("#btn-submitsql").click(function (){
 	//获取form对象，判断输入，通过则提交
-	var formSubmit = editor.getValue();
-
+	var formSubmit = $("#form-submitsql");
 	if (validateForm(formSubmit)) {
 		formSubmit.submit();
 	}

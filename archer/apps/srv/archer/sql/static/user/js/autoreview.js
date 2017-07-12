@@ -2,7 +2,6 @@ function validate() {
 	var result = true;
 	var sqlContent = editor.getValue();
 	var clusterName = $("#cluster_name").val();
-	console.log(sqlContent)
 	if (sqlContent === null || sqlContent === "" || sqlContent == $("#sql_content").attr("placeholder")) {
 		alert("SQL内容不能为空！");
 		return result = false;
@@ -19,6 +18,10 @@ $("#btn-autoreview").click(function(){
 	if (validate()) {
 		autoreview();
 	}
+});
+
+$("#btn-reset").click(function(){ 
+  editor.setValue('') 
 });
 
 function autoreview() {
