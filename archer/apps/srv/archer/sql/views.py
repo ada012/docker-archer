@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*- 
+# -*- coding: UTF-8 -*-
 
 import re
 import json
@@ -48,7 +48,7 @@ def allworkflow(request):
         pageNo = request.GET['pageNo']
     else:
         pageNo = '0'
-    
+
     if 'navStatus' in request.GET:
         navStatus = request.GET['navStatus']
     else:
@@ -110,8 +110,8 @@ def submitSql(request):
     masters = master_config.objects.all().order_by('cluster_name')
     if len(masters) == 0:
        context = {'errMsg': '集群数为0，可能后端数据没有配置集群'}
-       return render(request, 'error.html', context) 
-    
+       return render(request, 'error.html', context)
+
     #获取所有集群名称
     listAllClusterName = [master.cluster_name for master in masters]
 
@@ -136,9 +136,9 @@ def submitSql(request):
     reviewMen = users.objects.filter(role='审核人').exclude(username=loginUser)
     if len(reviewMen) == 0:
        context = {'errMsg': '审核人为0，请配置审核人'}
-       return render(request, 'error.html', context) 
+       return render(request, 'error.html', context)
     listAllReviewMen = [user.username for user in reviewMen]
-  
+
     context = {'currentMenu':'submitsql', 'dictAllClusterDb':dictAllClusterDb, 'reviewMen':reviewMen}
     return render(request, 'submitSql.html', context)
 
@@ -152,7 +152,7 @@ def autoreview(request):
     reviewMan = request.POST['review_man']
     subReviewMen = request.POST.get('sub_review_man', '')
     listAllReviewMen = (reviewMan, subReviewMen)
-   
+
     #服务器端参数验证
     if sqlContent is None or workflowName is None or clusterName is None or isBackup is None or reviewMan is None:
         context = {'errMsg': '页面提交参数可能为空'}
@@ -161,7 +161,7 @@ def autoreview(request):
     if sqlContent[-1] != ";":
         context = {'errMsg': "SQL语句结尾没有以;结尾，请后退重新修改并提交！"}
         return render(request, 'error.html', context)
- 
+
     #交给inception进行自动审核
     result = inceptionDao.sqlautoReview(sqlContent, clusterName, isBackup)
     if result is None or len(result) == 0:
@@ -218,8 +218,8 @@ def autoreview(request):
             else:
                 #不发邮件
                 pass
-    
-    return HttpResponseRedirect('/detail/' + str(workflowId) + '/') 
+
+    return HttpResponseRedirect('/detail/' + str(workflowId) + '/')
 
 #展示SQL工单详细内容，以及可以人工审核，审核通过即可执行
 def detail(request, workflowId):
@@ -247,7 +247,7 @@ def execute(request):
     if workflowId == '' or workflowId is None:
         context = {'errMsg': 'workflowId参数为空.'}
         return render(request, 'error.html', context)
-    
+
     workflowId = int(workflowId)
     workflowDetail = workflow.objects.get(id=workflowId)
     clusterName = workflowDetail.cluster_name
@@ -268,7 +268,7 @@ def execute(request):
         return render(request, 'error.html', context)
 
     dictConn = getMasterConnStr(clusterName)
-   
+
     #将流程状态修改为执行中，并更新reviewok_time字段
     workflowDetail.status = Const.workflowStatus['executing']
     workflowDetail.reviewok_time = getNow()
@@ -308,7 +308,7 @@ def execute(request):
             #不发邮件
             pass
 
-    return HttpResponseRedirect('/detail/' + str(workflowId) + '/') 
+    return HttpResponseRedirect('/detail/' + str(workflowId) + '/')
 
 #终止流程
 def cancel(request):
@@ -337,7 +337,7 @@ def cancel(request):
 
     workflowDetail.status = Const.workflowStatus['abort']
     workflowDetail.save()
-	
+
     #如果人工终止了，则根据settings.py里的配置决定是否给提交者和审核人发邮件提醒。如果是发起人终止流程，则给主、副审核人各发一封；如果是审核人终止流程，则给发起人发一封邮件，并附带说明此单子被拒绝掉了，需要重新修改.
     if hasattr(settings, 'MAIL_ON_OFF') == True:
         if getattr(settings, 'MAIL_ON_OFF') == "on":
@@ -384,6 +384,7 @@ def rollback(request):
 
 #SQL审核必读
 def dbaprinciples(request):
+    _getDetailUrl(request)
     context = {'currentMenu':'dbaprinciples'}
     return render(request, 'dbaprinciples.html', context)
 
@@ -395,7 +396,7 @@ def charts(request):
 #根据集群名获取主库连接字符串，并封装成一个dict
 def getMasterConnStr(clusterName):
     listMasters = master_config.objects.filter(cluster_name=clusterName)
-    
+
     masterHost = listMasters[0].master_host
     masterPort = listMasters[0].master_port
     masterUser = listMasters[0].master_user

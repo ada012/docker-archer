@@ -2,9 +2,12 @@
 
 {% block content %}
 			<h4>单子名称：<span id="editWorkflowNname">{{workflowDetail.workflow_name}}</span></h4>
-            <input type="hidden" id="workflowDetail_id" name="workflowid" value="{{workflowDetail.id}}">
-            <input type="hidden" id="editSqlContent" value="{{workflowDetail.sql_content}}"/>
-			<hr>	
+			<input type="hidden" id="workflowDetail_id" name="workflowid" value="{{workflowDetail.id}}">
+			<input type="hidden" id="editSqlContent" value="{{workflowDetail.sql_content}}"/>
+			<input type="hidden" id="editSqlReviewMen" value="{{listAllReviewMen.0}}"/>
+			<input type="hidden" id="editSqlcluster_name" value="{{workflowDetail.cluster_name}}"/>
+			<input type="hidden" id="editSqlis_backup" value="{{workflowDetail.is_backup}}"/>
+			<hr>
 			<table class="table table-striped table-hover">
 				<thead>
 					<tr>
@@ -37,7 +40,7 @@
 							{{workflowDetail.engineer}}
 						</td>
 						<td>
-                            {{listAllReviewMen.0}} {{listAllReviewMen.1}}
+              {{listAllReviewMen.0}} {{listAllReviewMen.1}}
 						</td>
 						<td>
 							{{workflowDetail.cluster_name}}
@@ -88,6 +91,7 @@
 					</tr>
 				</thead>
 				<tbody>
+					<!-- {{ listContent }} -->
 					{% for row in listContent %}
 					<tr>
 						<td>

@@ -6,6 +6,9 @@ inception:
 archer:
   build: ./archer
   links:
-      - inception
+    - inception
+  volumes:
+    - ./archer/apps/srv/archer/:/apps/srv/archer/
   ports:
     - 8080:80
+    - 9123:9123

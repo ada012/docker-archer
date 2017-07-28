@@ -225,9 +225,16 @@ $(document).ready(function () {
        var editWorkflowDetailId = $("#workflowDetail_id").val();
        var editWorkflowNname = $("#editWorkflowNname").text();
        var editSqlContent = $("#editSqlContent").val();
+       var editSqlReviewMen = $("#editSqlReviewMen").val();
+       var editSqlcluster_name = $("#editSqlcluster_name").val();
+       var editSqlis_backup = $("#editSqlis_backup").val();
+       
        sessionStorage.setItem('editWorkflowDetailId', editWorkflowDetailId);
        sessionStorage.setItem('editWorkflowNname', editWorkflowNname);
        sessionStorage.setItem('editSqlContent', editSqlContent);
+       sessionStorage.setItem('editSqlReviewMen', editSqlReviewMen);
+       sessionStorage.setItem('editSqlcluster_name', editSqlcluster_name);
+       sessionStorage.setItem('editSqlis_backup', editSqlis_backup);
     });
 
 });

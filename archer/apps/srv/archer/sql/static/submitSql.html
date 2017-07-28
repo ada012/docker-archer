@@ -6,8 +6,10 @@
 </style>
 {% block content %}
 <div class="container-fluid">
+    <div class="form-group">
+        <button id="create-template" class="btn btn-warning">创建库模版</button>
+    </div>
 	<div class="row clearfix">
-
 	<form id="form-submitsql" action="/autoreview/" method="post" class="form-horizontal" role="form">
 		{% csrf_token %}
         <input type="hidden" id="workflowid" name="workflowid"/>
@@ -30,7 +32,6 @@
 							)
 							</option>
                         {% endfor %}
-						        		
 					</select>					
 				</div>
 				<div class="form-group">
@@ -109,7 +110,10 @@
     if (pathname == "/editsql/") {
         document.getElementById('workflowid').value = sessionStorage.getItem('editWorkflowDetailId');
         document.getElementById('workflow_name').value = sessionStorage.getItem('editWorkflowNname');
-        document.getElementById('sql_content').value = sessionStorage.getItem('editSqlContent');
+        editor.setValue(sessionStorage.getItem('editSqlContent'));
+        document.getElementById('cluster_name').value = sessionStorage.getItem('editSqlcluster_name')
+        document.getElementById('review_man').value = sessionStorage.getItem('editSqlReviewMen')
+        document.getElementById('is_backup').value = sessionStorage.getItem('editSqlis_backup')
     }
 </script>
 {% endblock content %}

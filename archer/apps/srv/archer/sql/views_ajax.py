@@ -240,3 +240,18 @@ def stopOscProgress(request):
     else:
             optResult = {"status":4, "msg":"不是由pt-OSC执行的", "data":""}
     return HttpResponse(json.dumps(optResult), content_type='application/json')
+
+@csrf_exempt
+def templateList(request):
+    result = """CREATE TABLE `默认表` (
+    `id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+    `create_time` timestamp(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) COMMENT '创建时间',
+    `update_time` timestamp(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3) COMMENT '更新时间',
+    `valid` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否有效',
+    PRIMARY KEY (`id`),
+    KEY `idx_create_time` (`create_time`),
+    KEY `idx_update_time` (`update_time`)
+    ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COMMENT='默认表的备注')
+    };
+    """
+    return HttpResponse(json.dumps(result), content_type='application/json')

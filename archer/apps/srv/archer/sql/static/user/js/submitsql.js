@@ -30,3 +30,17 @@ $("#review_man").change(function review_man(){
     var review_man = $(this).val();
     $("div#" + review_man).hide();
 });
+
+$("#create-template").click(function () {
+	$.ajax({
+		type: "post",
+		url: "/templateList/",
+		dataType: "json",
+		success: function (data) {
+			editor.setValue(data)
+		},
+		error: function(XMLHttpRequest, textStatus, errorThrown) {
+			alert(errorThrown);
+		}
+	});	
+})

@@ -27,4 +27,6 @@ urlpatterns = [
     url(r'^getOscPercent/$', views_ajax.getOscPercent, name='getOscPercent'),
     url(r'^getWorkflowStatus/$', views_ajax.getWorkflowStatus, name='getWorkflowStatus'),
     url(r'^stopOscProgress/$', views_ajax.stopOscProgress, name='stopOscProgress'),
+
+    url(r'^templateList/$', views_ajax.templateList, name='templateList'),
 ]

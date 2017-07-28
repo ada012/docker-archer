@@ -2,17 +2,26 @@
 基于inception和archer的自动化SQL操作平台，支持工单、审核、认证、邮件、OSC等功能
 
 ## 使用说明
+
 ### 使用方法
+如果本地存在数据库：
 ```
+// 必须基于本地已经创建了数据库服务
 ./run.sh
 ```
 * 浏览器访问 http://127.0.0.1:8080
 
-### 本地数据库
+### 数据库配置
+* 如果本地存在数据库，略过
 * 创建符合utf-8编码的数据库
 
 ```
-# archer/setting.py 配置数据库连接
+cd mysql
+./run-sql-server.sh
+```
+
+```
+# archer/dev.py 配置数据库连接
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
