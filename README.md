@@ -44,6 +44,10 @@ DATABASES = {
 ./run.sh
 ```
 
+### archer
+* github地址: https://github.com/jly8866/archer
+
 ### inception
 * 一个集审核、执行、备份及生成回滚语句于一身的MySQL自动化运维工具
 * github地址: https://github.com/mysql-inception/inception
+
