@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  inception:
+    build: ./inception
+    ports:
+      - 5621:5621
+      - 6100:6100
+  archer:
+    build: ./archer
+    links:
+      - inception
+    volumes:
+      - ./archer/apps/srv/archer/:/apps/srv/archer/
+    ports:
+      - 8080:80
+      - 9123:9123

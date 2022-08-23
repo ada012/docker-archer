@@ -1,5 +1,4 @@
 FROM centos:latest
-MAINTAINER caihanyong@foxmail.com
 ENV PATH=/apps/srv/python3/bin:$PATH
 WORKDIR /apps/srv/archer
 COPY ./apps /apps
